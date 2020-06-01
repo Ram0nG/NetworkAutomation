@@ -1,0 +1,79 @@
+host S2
+enable password cisco
+!
+username mario password 0 cisco
+
+interface Vlan1
+ ip address 192.168.122.82 255.255.255.0
+ no shut
+ !
+ line vty 0 4
+  login local
+  transport input all
+
+--------------------------------------------------
+
+  host S3
+  enable password cisco
+  !
+  username mario password 0 cisco
+
+  interface Vlan1
+   ip address 192.168.122.83 255.255.255.0
+   no shut
+   !
+   line vty 0 4
+    login local
+    transport input all
+-----------------------------------------------------
+
+    host S4
+    enable password cisco
+    !
+    username mario password 0 cisco
+
+    interface Vlan1
+     ip address 192.168.122.84 255.255.255.0
+     no shut
+     !
+     line vty 0 4
+      login local
+      transport input all
+    !
+    end
+    wr
+  -----------------------------------------------------
+
+  host S5
+  enable password cisco
+  !
+  username mario password 0 cisco
+
+  interface Vlan1
+   ip address 192.168.122.85 255.255.255.0
+   no shut
+   !
+   line vty 0 4
+    login local
+    transport input all
+    !
+    end
+    wr
+  -------------------------------------------------------
+
+
+  host S6
+  enable password cisco
+  !
+  username mario password 0 cisco
+
+  interface Vlan1
+   ip address 192.168.122.86 255.255.255.0
+   no shut
+   !
+   line vty 0 4
+    login local
+    transport input all
+    !
+    end
+    wr
