@@ -5,7 +5,7 @@
 import getpass
 import telnetlib
 
-HOST = "192.168.122.71"
+HOST = "192.168.225.71"
 user = input("Enter your Telnet username: ")
 password = getpass.getpass()
 
@@ -22,6 +22,7 @@ tn.write(b"cisco\n")
 tn.write(b"config t\n")
 tn.write(b"int loop 0\n")
 tn.write(b"ip address 1.1.1.1 255.255.255.255\n")
+tn.write(b"exit\n")
 tn.write(b"int loop 1\n")
 tn.write(b"ip address 2.2.2.2 255.255.255.255\n")
 tn.write(b"end\n")
