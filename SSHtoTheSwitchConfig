@@ -1,0 +1,17 @@
+#This is an example of how to configure SSH on a Cisco Switch:
+#You will need to enter "enable" and put the password after that u can copy
+
+config t
+username mario pass cisco
+username mario priv 15
+
+line vty 0 4
+login local
+transport input all
+
+ip domain-name supermario.com
+crypto key generate rsa
+1024
+
+end
+wr
